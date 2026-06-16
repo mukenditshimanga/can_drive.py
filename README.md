@@ -6,20 +6,16 @@ def can_drive(age):
 
 class TestCanDrive(unittest.TestCase):
 
-    def test_underage(self):
-        self.assertFalse(can_drive(15))
+    def test_driving.eligibility(self):
+       #Test Eligibility
+       self.assertTrue(can_drive(25))
+       self.assertTrue(can_drive(17))
+       self.assertTrue(can_drive(16))
 
-    def test_exact_age(self):
-        self.assertTrue(can_drive(16))
-
-    def test_over_age(self):
-        self.assertTrue(can_drive(18))
-
-    def test_zero_age(self):
-        self.assertFalse(can_drive(0))
-
-    def test_negative_age(self):
-        self.assertFalse(can_drive(-5))
+       #Test Ineligibible
+       sel.assertFalse(can_drive(15))
+       self.assertFalse(can_drive(0))
+       self.assertFalse(can_drive(-1)
 
 
 if __name__ == "__main__":
